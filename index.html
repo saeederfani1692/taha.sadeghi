@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>پروفایل دایان قاسمپور</title>
+  <style>
+    body { font-family: Tahoma, sans-serif; background: #f8f9fa; margin:0; padding:0 10px 40px; color:#222; direction:rtl; }
+    header {
+      text-align:center; margin:0 0 20px; padding:20px 10px;
+      background: linear-gradient(90deg, #007bff, #0056b3);
+      color:#fff; border-radius:0 0 15px 15px; box-shadow:0 4px 10px rgba(0,0,0,0.15);
+      position:relative; z-index:1;
+    }
+    header::after {
+      content:""; display:block; width:100%; height:6px;
+      background:#ffd700; border-radius:0 0 15px 15px;
+      position:absolute; bottom:0; left:0; z-index:-1;
+    }
+    header h1 { margin:0; font-size:2.8rem; font-weight:700; }
+    header h2 { margin:5px 0 0; font-size:1.6rem; font-weight:400; }
+
+    .post-suggestion {
+      max-width:720px; margin:15px auto 5px; padding:8px 15px;
+      background:#e7f1ff; font-size:1.1rem; font-weight:600;
+      color:#0d6efd; border-radius:8px; text-align:right; width:fit-content;
+    }
+    .post-suggestion span { font-weight:700; font-size:1.3rem; color:#444; margin-right:12px; }
+
+    .menu-container { max-width:720px; margin:30px auto; }
+    .menu-item { border-bottom:1.5px solid #ddd; margin-bottom:10px; }
+    .menu-item button {
+      width:100%; background:#fff; border:none; text-align:right;
+      font-size:1.25rem; font-weight:600; padding:15px 10px; cursor:pointer;
+      color:#0d6efd; transition:background-color .3s;
+    }
+    .menu-item button:hover,
+    .menu-item button:focus { background:#e7f1ff; outline:none; }
+    .menu-item.active button { background:#0d6efd; color:#fff; }
+    .content {
+      display:none; padding:12px 15px 20px; font-size:1rem;
+      line-height:1.5; color:#333; background:#f0f5ff;
+    }
+    .menu-item.active .content { display:block; }
+
+    /* استایل ویژه برای امتیازات تخصصی */
+    .scores-content {
+      background:#ffdddd;
+      border:2px solid #ff0000;
+      color:#b30000;
+      font-size:1.3rem;
+      font-weight:700;
+      border-radius:10px;
+      padding:15px 20px;
+      line-height:1.6;
+    }
+
+    .score-label { text-align:center; font-weight:700; font-size:1.1rem; color:#b38b00; margin-top:30px; }
+    .score-box {
+      margin:10px auto 30px; width:140px; height:140px;
+      background:linear-gradient(135deg, #d4af37 0%, #b38b00 100%);
+      color:#fff; font-size:3rem; font-weight:700; border-radius:10px;
+      display:flex; align-items:center; justify-content:center;
+      box-shadow:0 4px 15px rgba(212,175,55,0.7);
+    }
+
+    .audio-section {
+      max-width:720px; margin:20px auto;
+      background:#dbe9ff; border:2px solid #0d6efd;
+      border-radius:12px; padding:12px 15px; text-align:center;
+      font-weight:700; color:#0d6efd; box-shadow:0 3px 10px rgba(0,0,255,0.25);
+    }
+    .audio-section strong { display:block; font-size:1.2rem; margin-bottom:8px; }
+    .audio-section audio {
+      width:100%; max-width:360px; outline:none; border-radius:8px;
+      box-shadow:0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .insta-box {
+      max-width:240px; margin:15px auto 30px; padding:9px 15px;
+      background:#f0f0f0; border:1.8px solid #ccc; border-radius:8px;
+      font-size:1.1rem; font-weight:600; color:#555; text-align:center;
+    }
+    .insta-box .insta-handle { color:#0d6efd; display:block; margin-top:4px; }
+
+    .footer-text {
+      text-align:center; margin:30px 0 20px; font-size:1rem; font-weight:700; color:#000;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>مدرسه فوتبال سورنا</h1>
+  <h2>آنالیز تخصصی دایان قاسمپور</h2>
+</header>
+
+<div class="post-suggestion" role="note">
+  پست پیشنهادی از طرف مربی: <span>هافبک چپ</span>
+</div>
+
+<div class="menu-container" role="region" aria-label="منوهای اطلاعات بازیکن">
+
+  <!-- منوی امتیازات تخصصی بالاتر از بقیه -->
+  <div class="menu-item">
+    <button onclick="toggleMenu(this)" aria-expanded="false" aria-controls="scores">امتیازات تخصصی بازیکن</button>
+    <div class="content scores-content" id="scores" aria-hidden="true">
+      <ul style="list-style:none; padding:0; margin:0;">
+        <li>پاس: ۸۵ از ۱۰۰</li>
+        <li>شوت: ۷۷ از ۱۰۰</li>
+        <li>دریبل: ۸۹ از ۱۰۰</li>
+        <li>سرزن: ۷۰ از ۱۰۰</li>
+        <li>دفاع: ۶۵ از ۱۰۰</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="menu-item">
+    <button onclick="toggleMenu(this)" aria-expanded="false" aria-controls="personal-info">مشخصات فردی و ظاهری</button>
+    <div class="content" id="personal-info" aria-hidden="true">
+      <p>نام کامل: دایان قاسمپور</p>
+      <p>سن: ۱۸ سال</p>
+      <p>قد: ۱۷۸ سانتی‌متر</p>
+      <p>وزن: ۷۰ کیلوگرم</p>
+      <p>رنگ چشم: قهوه‌ای</p>
+      <p>رنگ مو: مشکی</p>
+    </div>
+  </div>
+
+  <div class="menu-item">
+    <button onclick="toggleMenu(this)" aria-expanded="false" aria-controls="personality">خصوصیات اخلاقی و روحیه</button>
+    <div class="content" id="personality" aria-hidden="true">
+      <p>دایان بازیکنی با روحیه قوی، انگیزه بالا و همکاری تیمی بسیار عالی است.</p>
+    </div>
+  </div>
+
+  <div class="menu-item">
+    <button onclick="toggleMenu(this)" aria-expanded="false" aria-controls="technical">نکات فنی و تکنیکی</button>
+    <div class="content" id="technical" aria-hidden="true">
+      <p>توانایی پاس‌های دقیق و قوی دارد.</p>
+      <p>مهارت دریبل زنی بالا و دید بازی عالی در زمین.</p>
+      <p>قابلیت شوت‌زنی از راه دور و بازی‌سازی مؤثر.</p>
+    </div>
+  </div>
+
+  <div class="menu-item">
+    <button onclick="toggleMenu(this)" aria-expanded="false" aria-controls="improvements">پیشنهادات مربی برای ارتقای عملکرد</button>
+    <div class="content" id="improvements" aria-hidden="true">
+      <p>تقویت سرعت دویدن و استقامت بدنی.</p>
+    </div>
+  </div>
+
+</div>
+
+<div class="score-label">امتیاز ماه</div>
+<div class="score-box">۸۵</div>
+
+<div class="audio-section">
+  <strong>صحبت‌های مربی:</strong>
+  <audio controls>
+    <!-- بدون منبع صوتی در این مرحله -->
+  </audio>
+</div>
+
+<div class="insta-box">
+  پیج اینستاگرام باشگاه:<br>
+  <span class="insta-handle">@surena.fc</span>
+</div>
+
+<div class="footer-text">مدیریت باشگاه فوتبال سورنا</div>
+
+<script>
+  function toggleMenu(btn) {
+    const expanded = btn.getAttribute('aria-expanded') === 'true';
+    document.querySelectorAll('.menu-item').forEach(item => {
+      item.classList.remove('active');
+      item.querySelector('button').setAttribute('aria-expanded', 'false');
+      item.querySelector('.content').setAttribute('aria-hidden', 'true');
+    });
+    if (!expanded) {
+      btn.setAttribute('aria-expanded', 'true');
+      const content = document.getElementById(btn.getAttribute('aria-controls'));
+      content.setAttribute('aria-hidden', 'false');
+      btn.parentElement.classList.add('active');
+    }
+  }
+</script>
+
+</body>
+</html>
